@@ -1,3 +1,6 @@
+import musicaCurta
+import musicaCompleta
+
 def eh_valido(numero):
     if (numero == '1' or numero == '2'):
         return True
@@ -11,5 +14,6 @@ while not eh_valido(escolhe) or not escolhe.isnumeric():
 
 if escolhe == '1':
     print('Jogando em modo curta')
+    
 elif escolhe == '2':
     print('Jogando em modo completa')
