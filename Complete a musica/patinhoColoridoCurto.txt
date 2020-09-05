@@ -1,22 +1,22 @@
 O Patinho Amarelinho
-Resolveu mudar de cor
+Resolveu _____ de cor
 Usou tinta colorida
 E azul ele ficou
 
 Viva o Patinho Azul
-Viva o Patinho Azul
+Viva o Patinho ____
 Viva o Patinho Azul
 Viva o Patinho Azul
 
 O Patinho Azulzinho
-Resolveu mudar de cor
-Usou tinta colorida
-E vermelho ele ficou
+Resolveu mudar de ___
+Usou tinta ________
+E vermelho ___ ficou
 
 Viva o Patinho Vermelho
 Viva o Patinho Vermelho
 Viva o Patinho Vermelho
-Viva o Patinho Vermelho
+____ o Patinho Vermelho
 
 O Patinho Vermelhinho
 Resolveu mudar de cor
@@ -24,11 +24,11 @@ Usou tinta colorida
 E verdinho ele ficou
 
 Viva o Patinho Verdinho
-Viva o Patinho Verdinho
+Viva o Patinho ________
 Viva o Patinho Verdinho
 Viva o Patinho Verdinho
 
-O Patinho que era Verde
+O _______ que era Verde
 Resolveu mudar de cor
 Usou tinta colorida
 E amarelo ele ficou
