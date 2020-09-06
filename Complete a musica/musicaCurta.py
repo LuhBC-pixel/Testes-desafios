@@ -5,6 +5,8 @@ def arquivo_para_lista():
     for linha in arquivo:
         frases_da_musica.append(linha)
     
+    arquivo.close()
+    
     return frases_da_musica
 
 def arquivo_resposta_para_lista():
@@ -14,23 +16,28 @@ def arquivo_resposta_para_lista():
     for linha in arquivo:
         palavras_certas.append(linha)
     
+    arquivo.close()
+    
     return palavras_certas
 
 lista_do_arquivo = arquivo_para_lista()
 respostas_arquivo = arquivo_resposta_para_lista()
+for i in range(len(respostas_arquivo)):
 
-def resposta_esta_certa(resposta_do_usuario):
-    for i in range(len(respostas_arquivo)):
-        if respostas_arquivo[i].lower() == resposta_do_usuario.lower():
-            return True
-    return False
+    print(respostas_arquivo[i].lower())
 
-for i in range(len(lista_do_arquivo)):
+ def resposta_esta_certa(resposta_do_usuario):
+     for i in range(len(respostas_arquivo)):
+         if respostas_arquivo[i].lower() == resposta_do_usuario:
+             return True
+     return False
 
-    if '_' in lista_do_arquivo[i]:
-        resposta = input(lista_do_arquivo[i] + ':')
+ for i in range(len(lista_do_arquivo)):
 
-        if resposta_esta_certa(resposta):
-            lista_do_arquivo[i] = lista_do_arquivo[i].replace('_' * len(resposta), resposta)
+     if '_' in lista_do_arquivo[i]:
+         resposta = str(input(lista_do_arquivo[i] + ':')).lower()
 
-    print(lista_do_arquivo[i])
+         if resposta_esta_certa(resposta):
+             lista_do_arquivo[i] = lista_do_arquivo[i].replace('_', resposta)
+
+         print(lista_do_arquivo[i])
