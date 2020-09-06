@@ -24,10 +24,13 @@ lista_do_arquivo = arquivo_para_lista()
 respostas_arquivo = arquivo_resposta_para_lista()
 
 def resposta_esta_certa(resposta_do_usuario):
-     for j in range(len(respostas_arquivo)):
-         if respostas_arquivo[j] == resposta_do_usuario:
-             return True
-     return False
+    print(respostas_arquivo[0])
+    for j in range(len(respostas_arquivo)):
+        if (respostas_arquivo[j] == resposta_do_usuario):
+            print('ok')
+            return True
+    print('not ok')
+    return False
 
 for i in range(len(lista_do_arquivo)):
 
