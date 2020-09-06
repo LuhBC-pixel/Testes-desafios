@@ -14,7 +14,7 @@ def arquivo_resposta_para_lista():
     palavras_certas = []
 
     for linha in arquivo:
-        palavras_certas.append(linha)
+        palavras_certas.append(linha.lower())
     
     arquivo.close()
     
@@ -22,22 +22,20 @@ def arquivo_resposta_para_lista():
 
 lista_do_arquivo = arquivo_para_lista()
 respostas_arquivo = arquivo_resposta_para_lista()
-for i in range(len(respostas_arquivo)):
 
-    print(respostas_arquivo[i].lower())
-
- def resposta_esta_certa(resposta_do_usuario):
-     for i in range(len(respostas_arquivo)):
-         if respostas_arquivo[i].lower() == resposta_do_usuario:
+def resposta_esta_certa(resposta_do_usuario):
+     for j in range(len(respostas_arquivo)):
+         if respostas_arquivo[j] == resposta_do_usuario:
              return True
      return False
 
- for i in range(len(lista_do_arquivo)):
+for i in range(len(lista_do_arquivo)):
 
-     if '_' in lista_do_arquivo[i]:
-         resposta = str(input(lista_do_arquivo[i] + ':')).lower()
+    if '_' in lista_do_arquivo[i]:
+        resposta = str(input(lista_do_arquivo[i] + ':')).lower()
+        print(resposta)
 
-         if resposta_esta_certa(resposta):
-             lista_do_arquivo[i] = lista_do_arquivo[i].replace('_', resposta)
+        if resposta_esta_certa(resposta):
+            lista_do_arquivo[i] = lista_do_arquivo[i].replace('_', resposta)
 
-         print(lista_do_arquivo[i])
+        print(lista_do_arquivo[i])
