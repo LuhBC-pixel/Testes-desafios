@@ -1,1 +1,1 @@
-# São vários tipos de e outros desafios com Python 
+# São vários tipos de teste e outros desafios com Python 
