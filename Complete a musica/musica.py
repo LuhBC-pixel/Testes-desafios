@@ -8,12 +8,13 @@ def eh_valido(numero):
 
 escolhe = input("Deseja jogar com a música em versão curta ou completa? (1 - curta /2 - completa): ")
 
-while not eh_valido(escolhe) or not escolhe.isnumeric():
+while not eh_valido(escolhe):
     print('Dígito inválido!')
     escolhe = input("Deseja jogar com a música em versão curta ou completa? (1 - curta /2 - completa): ")
 
 if escolhe == '1':
     print('Jogando em modo curta')
-    
+    musicaCurta.jogo()
 elif escolhe == '2':
     print('Jogando em modo completa')
+    musicaCompleta.jogo()
