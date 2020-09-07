@@ -14,31 +14,35 @@ def arquivo_resposta_para_lista():
     palavras_certas = []
 
     for linha in arquivo:
-        palavras_certas.append(linha.lower())
+        linha = linha.strip('\n')
+        palavras_certas.append(linha)
     
     arquivo.close()
     
     return palavras_certas
 
+def resposta_esta_certa(resposta_do_usuario):
+    for j in range(len(respostas_arquivo)):
+        if (respostas_arquivo[j].lower() == resposta_do_usuario):
+            return True
+    return False
+
 lista_do_arquivo = arquivo_para_lista()
 respostas_arquivo = arquivo_resposta_para_lista()
 
-def resposta_esta_certa(resposta_do_usuario):
-    print(respostas_arquivo[0])
-    for j in range(len(respostas_arquivo)):
-        if (respostas_arquivo[j] == resposta_do_usuario):
-            print('ok')
-            return True
-    print('not ok')
-    return False
+def jogo():
+    for i in range(len(lista_do_arquivo)):
 
-for i in range(len(lista_do_arquivo)):
+        if '_' in lista_do_arquivo[i]:
+            resposta = str(input(lista_do_arquivo[i] + ':')).lower().strip(' ')
 
-    if '_' in lista_do_arquivo[i]:
-        resposta = str(input(lista_do_arquivo[i] + ':')).lower()
-        print(resposta)
+            while not resposta_esta_certa(resposta):
+                print('Resposta incorreta')
+                resposta = str(input(lista_do_arquivo[i] + ':')).lower().strip(' ')
 
-        if resposta_esta_certa(resposta):
             lista_do_arquivo[i] = lista_do_arquivo[i].replace('_', resposta)
 
         print(lista_do_arquivo[i])
+
+if __name__ == '__main__':
+    jogo()
